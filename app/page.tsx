@@ -118,120 +118,134 @@ import { useState } from "react";
 
 {/* HERO Section */}
 
-<section className="h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white flex items-center justify-center">
+<section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden">
 
-  <div className="text-center max-w-4xl px-6">
+  {/* Background Glow */}
+  <div className="absolute w-[500px] h-[500px] bg-blue-500/30 blur-3xl rounded-full top-20 left-10 animate-pulse"></div>
+  <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-10 right-10 animate-pulse"></div>
 
-    <h1 className="text-7xl font-extrabold leading-tight">
+  {/* Content */}
+  <div className="text-center max-w-5xl px-6 z-10">
 
-      Learn Modern <span className="text-blue-500">Tech Skills</span>
-      <br />
-      Faster Than Ever
+    {/* Badge */}
+    <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 text-sm mb-8 animate-bounce">
+      🚀 Future of Learning Starts Here
+    </div>
+
+    {/* Main Heading */}
+    <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+
+      Build. Learn. <span className="text-blue-500">Grow.</span>
 
     </h1>
 
-    <p className="mt-8 text-xl text-gray-300 leading-8">
+    {/* Sub Heading */}
+    <p className="mt-8 text-lg md:text-xl text-gray-300 leading-8">
 
-      Build real-world projects, learn from industry experts,
-      and grow your career with practical learning experiences.
+      A modern learning platform where you don’t just watch — you build real projects,
+      gain practical skills, and become industry-ready with confidence.
 
     </p>
 
-    <div className="mt-10 flex gap-6 justify-center">
+    {/* Buttons */}
+    <div className="mt-10 flex flex-col md:flex-row gap-5 justify-center">
 
-      <button className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg">
+      <button className="bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105">
         Get Started
       </button>
 
-      <button className="border border-white px-8 py-4 rounded-2xl text-lg hover:bg-white hover:text-black transition">
+      <button className="border border-white/30 hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg">
         Explore Courses
       </button>
+
+    </div>
+
+    {/* Stats */}
+    <div className="mt-14 flex flex-wrap justify-center gap-10 text-gray-300 text-sm">
+
+      <div className="hover:text-white transition">
+        ⭐ 4.9 Rating
+      </div>
+
+      <div className="hover:text-white transition">
+        👨‍🎓 10k+ Students
+      </div>
+
+      <div className="hover:text-white transition">
+        🚀 100+ Projects
+      </div>
 
     </div>
 
   </div>
 
 </section>
-
       
 {/* About Section */}
-
+ 
 <section
   id="about"
-  className="py-28 bg-gradient-to-b from-white to-gray-100"
+  className="py-28 bg-white"
 >
 
   <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-14 items-center">
 
-    {/* Left Side */}
+    {/* Left Image Side */}
+    <div className="relative">
+
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+        alt="About"
+        className="rounded-3xl shadow-2xl w-full hover:scale-105 transition duration-500"
+      />
+
+      {/* Floating badge */}
+      <div className="absolute -bottom-5 -right-5 bg-blue-600 text-white px-5 py-3 rounded-2xl shadow-lg animate-bounce">
+        🚀 Learning Platform
+      </div>
+
+    </div>
+
+    {/* Right Text Side */}
     <div>
 
-      <h2 className="text-5xl font-extrabold leading-tight text-gray-900">
+      <h2 className="text-5xl font-bold text-gray-900">
         About Us
       </h2>
 
       <p className="mt-6 text-gray-600 text-lg leading-8">
-
-        We are on a mission to transform the way students learn technology.
-        Instead of just theory, we focus on <span className="font-semibold text-gray-900">real-world skills</span>,
-        hands-on projects, and industry-driven learning that prepares you for the future.
-
+        We help students learn modern technology through real-world projects,
+        live mentorship, and practical experience that builds real skills.
       </p>
 
       <p className="mt-4 text-gray-600 text-lg leading-8">
-
-        With expert mentorship, live interactive classes, and project-based training,
-        we help you become confident, job-ready, and future-focused.
-
+        Our focus is simple — learn, build, and grow into a job-ready developer.
       </p>
 
-      <button className="mt-8 bg-blue-600 text-white px-7 py-3 rounded-2xl hover:bg-blue-700 transition shadow-lg">
-        Explore Programs
-      </button>
+      {/* Points */}
+      <div className="mt-8 space-y-4">
 
-    </div>
-
-    {/* Right Side */}
-    <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
-
-      <h3 className="text-3xl font-bold text-gray-900">
-        Why Choose Us?
-      </h3>
-
-      <p className="mt-3 text-gray-500">
-        Everything you need to grow your tech career in one place.
-      </p>
-
-      <ul className="mt-8 space-y-5 text-gray-700 text-lg">
-
-        <li className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <span className="text-green-500 text-xl">✔</span>
-          Industry Expert Mentors
-        </li>
+          <p className="text-gray-700">Live Interactive Classes</p>
+        </div>
 
-        <li className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <span className="text-green-500 text-xl">✔</span>
-          Real-World Project Building
-        </li>
+          <p className="text-gray-700">Real-World Projects</p>
+        </div>
 
-        <li className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <span className="text-green-500 text-xl">✔</span>
-          Career Guidance & Placement Support
-        </li>
+          <p className="text-gray-700">Career Guidance & Mentorship</p>
+        </div>
 
-        <li className="flex items-center gap-3">
-          <span className="text-green-500 text-xl">✔</span>
-          Certification Programs
-        </li>
-
-      </ul>
-
-      {/* Extra highlight box */}
-      <div className="mt-8 p-5 bg-blue-50 rounded-2xl border border-blue-100">
-        <p className="text-blue-700 font-medium">
-          🚀 Learn by building real projects — not just watching videos.
-        </p>
       </div>
+
+      {/* Button */}
+      <button className="mt-10 bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition shadow-lg">
+        Explore More
+      </button>
 
     </div>
 
