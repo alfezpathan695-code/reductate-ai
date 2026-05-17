@@ -327,56 +327,94 @@ import { useState } from "react";
 
 <section
   id="testimonials"
-  className="py-24 bg-black text-white"
+  className="py-24 bg-gradient-to-b from-black to-gray-900 text-white"
 >
 
   <h2 className="text-5xl font-bold text-center mb-16">
     What Students Say
   </h2>
 
-  <div className="grid md:grid-cols-3 gap-8 px-8 max-w-7xl mx-auto">
+  <div className="grid md:grid-cols-3 gap-10 px-8 max-w-7xl mx-auto">
 
-    <div className="bg-gray-900 p-8 rounded-3xl shadow-lg">
+    {/* Card 1 */}
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-lg hover:-translate-y-3 transition duration-300">
+
+      <div className="flex items-center gap-4 mb-4">
+
+        <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center font-bold">
+          A
+        </div>
+
+        <div>
+          <h3 className="font-bold">Alfej Pathan</h3>
+          <p className="text-sm text-gray-300">Frontend Student</p>
+        </div>
+
+      </div>
+
+      <div className="text-yellow-400 mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
 
       <p className="text-gray-300 leading-7">
-        “Amazing platform! I improved my development skills
-        and built real projects.”
+        “Amazing platform! I improved my development skills and built real projects.”
       </p>
-
-      <h3 className="mt-6 text-xl font-bold">
-        Alfej Pathan
-      </h3>
 
     </div>
 
-    <div className="bg-gray-900 p-8 rounded-3xl shadow-lg">
+    {/* Card 2 */}
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-lg hover:-translate-y-3 transition duration-300">
+
+      <div className="flex items-center gap-4 mb-4">
+
+        <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center font-bold">
+          S
+        </div>
+
+        <div>
+          <h3 className="font-bold">Ashh Khan</h3>
+          <p className="text-sm text-gray-300">Full Stack Learner</p>
+        </div>
+
+      </div>
+
+      <div className="text-yellow-400 mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
 
       <p className="text-gray-300 leading-7">
-        “The mentors are very supportive and classes are
-        highly practical.”
+        “Mentors are very supportive and classes are highly practical.”
       </p>
-
-      <h3 className="mt-6 text-xl font-bold">
-        Ashh khan
-      </h3>
 
     </div>
 
-    <div className="bg-gray-900 p-8 rounded-3xl shadow-lg">
+    {/* Card 3 */}
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-lg hover:-translate-y-3 transition duration-300">
+
+      <div className="flex items-center gap-4 mb-4">
+
+        <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center font-bold">
+          A
+        </div>
+
+        <div>
+          <h3 className="font-bold">Aman Singh</h3>
+          <p className="text-sm text-gray-300">UI/UX Student</p>
+        </div>
+
+      </div>
+
+      <div className="text-yellow-400 mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
 
       <p className="text-gray-300 leading-7">
-        “One of the best learning experiences for students
-        who want real skills.”
+        “One of the best learning experiences for students who want real skills.”
       </p>
-
-      <h3 className="mt-6 text-xl font-bold">
-        Aman Singh
-      </h3>
 
     </div>
 
   </div>
-
 </section>
 
  
