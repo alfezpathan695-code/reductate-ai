@@ -1,57 +1,121 @@
+ "use client";
+
+import { useState } from "react";
+
  export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
 
       {/* Navbar */}
 
-<header className="bg-black text-white flex justify-between items-center px-8 py-5 sticky top-0 z-50 shadow-lg">
 
-  <h1 className="text-3xl font-extrabold text-blue-400">
-    Reductate.ai
-  </h1>
 
-  <nav>
-    <ul className="flex gap-8 text-lg">
+<header className="bg-black text-white px-8 py-5 sticky top-0 z-50 shadow-lg">
 
-      <li>
-        <a href="#" className="hover:text-blue-400 transition">
-          Home
-        </a>
-      </li>
+  <div className="flex justify-between items-center">
 
-      <li>
-        <a href="#about" className="hover:text-blue-400 transition">
-          About
-        </a>
-      </li>
+    <h1 className="text-3xl font-extrabold text-blue-400">
+      Reductate.ai
+    </h1>
 
-      <li>
-        <a href="#features" className="hover:text-blue-400 transition">
-          Features
-        </a>
-      </li>
+    
+    {/* Desktop Menu */}
 
-      <li>
-        <a href="#testimonials" className="hover:text-blue-400 transition">
-          Testimonials
-        </a>
-      </li>
+    <nav className="hidden md:block">
 
-      <li>
-        <a href="#contact" className="hover:text-blue-400 transition">
-          Contact
-        </a>
-      </li>
+      <ul className="flex gap-8 text-lg">
 
-    </ul>
-  </nav>
+        <li>
+          <a href="#" className="hover:text-blue-400 transition">
+            Home
+          </a>
+        </li>
 
-  <button className="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-xl font-semibold">
-    Join Now
-  </button>
+        <li>
+          <a href="#about" className="hover:text-blue-400 transition">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#features" className="hover:text-blue-400 transition">
+            Features
+          </a>
+        </li>
+
+        <li>
+          <a href="#testimonials" className="hover:text-blue-400 transition">
+            Testimonials
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" className="hover:text-blue-400 transition">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+
+    {/* Desktop Button */}
+
+    <button className="hidden md:block bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-xl font-semibold">
+      Join Now
+    </button>
+
+
+    {/* Mobile Menu Button */}
+
+    <button
+      className="md:hidden text-3xl"
+      onClick={() => setMenuOpen(!menuOpen)}
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  {/* Mobile Menu */}
+
+  {menuOpen && (
+
+    <div className="md:hidden mt-6 bg-gray-900 rounded-2xl p-6">
+
+      <ul className="flex flex-col gap-6 text-lg">
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#features">Features</a>
+        </li>
+
+        <li>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+      <button className="mt-6 w-full bg-blue-500 py-3 rounded-xl">
+        Join Now
+      </button>
+
+    </div>
+
+  )}
 
 </header>
-        
+
 {/* HERO Section */}
 
 <section className="h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white flex items-center justify-center">
