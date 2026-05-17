@@ -226,7 +226,7 @@
       </p>
 
       <h3 className="mt-6 text-xl font-bold">
-        Rahul Sharma
+        Alfej Pathan
       </h3>
 
     </div>
@@ -239,7 +239,7 @@
       </p>
 
       <h3 className="mt-6 text-xl font-bold">
-        Priya Verma
+        Ashh khan
       </h3>
 
     </div>
