@@ -142,6 +142,8 @@
 
 {/* Features Section */}
 
+{/* Features Section */}
+
 <section
   id="features"
   className="py-24 bg-gray-100"
@@ -151,53 +153,105 @@
     Our Features
   </h2>
 
-  <div className="grid md:grid-cols-3 gap-10 px-8 max-w-7xl mx-auto">
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
 
-    <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-3 transition">
 
-      <div className="text-5xl">
-        🚀
+    {/* Card 1 */}
+
+    <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-300">
+
+      <img
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+        alt="Live Classes"
+        className="w-full h-52 object-cover"
+      />
+
+      <div className="p-6">
+
+        <h3 className="text-2xl font-bold">
+          Live Classes
+        </h3>
+
+        <p className="mt-4 text-gray-600 leading-7">
+          Interactive live sessions with expert mentors.
+        </p>
+
       </div>
-
-      <h3 className="mt-6 text-3xl font-bold">
-        Live Classes
-      </h3>
-
-      <p className="mt-4 text-gray-600 leading-7">
-        Interactive live sessions with experienced mentors.
-      </p>
 
     </div>
 
-    <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-3 transition">
 
-      <div className="text-5xl">
-        💻
+    {/* Card 2 */}
+
+    <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-300">
+
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        alt="Projects"
+        className="w-full h-52 object-cover"
+      />
+
+      <div className="p-6">
+
+        <h3 className="text-2xl font-bold">
+          Real Projects
+        </h3>
+
+        <p className="mt-4 text-gray-600 leading-7">
+          Build practical projects for your portfolio.
+        </p>
+
       </div>
-
-      <h3 className="mt-6 text-3xl font-bold">
-        Real Projects
-      </h3>
-
-      <p className="mt-4 text-gray-600 leading-7">
-        Work on practical applications and build your portfolio.
-      </p>
 
     </div>
 
-    <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-3 transition">
 
-      <div className="text-5xl">
-        🎓
+    {/* Card 3 */}
+
+    <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-300">
+
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+        alt="Certificates"
+        className="w-full h-52 object-cover"
+      />
+
+      <div className="p-6">
+
+        <h3 className="text-2xl font-bold">
+          Certifications
+        </h3>
+
+        <p className="mt-4 text-gray-600 leading-7">
+          Earn industry-recognized certifications.
+        </p>
+
       </div>
 
-      <h3 className="mt-6 text-3xl font-bold">
-        Certifications
-      </h3>
+    </div>
 
-      <p className="mt-4 text-gray-600 leading-7">
-        Get industry-recognized certificates after completion.
-      </p>
+
+    {/* Card 4 */}
+
+    <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-300">
+
+      <img
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+        alt="Career Support"
+        className="w-full h-52 object-cover"
+      />
+
+      <div className="p-6">
+
+        <h3 className="text-2xl font-bold">
+          Career Support
+        </h3>
+
+        <p className="mt-4 text-gray-600 leading-7">
+          Get mentorship and career guidance support.
+        </p>
+
+      </div>
 
     </div>
 
