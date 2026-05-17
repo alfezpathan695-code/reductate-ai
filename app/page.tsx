@@ -118,61 +118,124 @@ import { useState } from "react";
 
 {/* HERO Section */}
 
-<section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden">
+<section className="relative min-h-screen bg-black text-white overflow-hidden flex items-center">
 
-  {/* Background Glow */}
-  <div className="absolute w-[500px] h-[500px] bg-blue-500/30 blur-3xl rounded-full top-20 left-10 animate-pulse"></div>
-  <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-10 right-10 animate-pulse"></div>
+  {/* Background Glow Effects */}
+  <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/30 blur-[120px] rounded-full animate-pulse"></div>
 
-  {/* Content */}
-  <div className="text-center max-w-5xl px-6 z-10">
+  <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-500/30 blur-[120px] rounded-full animate-pulse"></div>
 
-    {/* Badge */}
-    <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 text-sm mb-8 animate-bounce">
-      🚀 Future of Learning Starts Here
-    </div>
+  {/* Grid Overlay */}
+  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
-    {/* Main Heading */}
-    <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+  {/* Main Container */}
+  <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
-      Build. Learn. <span className="text-blue-500">Grow.</span>
+    {/* LEFT CONTENT */}
+    <div>
 
-    </h1>
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8">
 
-    {/* Sub Heading */}
-    <p className="mt-8 text-lg md:text-xl text-gray-300 leading-8">
+        <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
 
-      A modern learning platform where you don’t just watch — you build real projects,
-      gain practical skills, and become industry-ready with confidence.
+        <span className="text-sm text-gray-300">
+          AI Powered Learning Platform
+        </span>
 
-    </p>
-
-    {/* Buttons */}
-    <div className="mt-10 flex flex-col md:flex-row gap-5 justify-center">
-
-      <button className="bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105">
-        Get Started
-      </button>
-
-      <button className="border border-white/30 hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg">
-        Explore Courses
-      </button>
-
-    </div>
-
-    {/* Stats */}
-    <div className="mt-14 flex flex-wrap justify-center gap-10 text-gray-300 text-sm">
-
-      <div className="hover:text-white transition">
-        ⭐ 4.9 Rating
       </div>
 
-      <div className="hover:text-white transition">
-        👨‍🎓 10k+ Students
+      {/* Heading */}
+      <h1 className="text-5xl md:text-7xl font-black leading-tight">
+
+        Learn
+        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+          {" "}Modern Skills
+        </span>
+
+        <br />
+
+        Build Your Future 🚀
+
+      </h1>
+
+      {/* Description */}
+      <p className="mt-8 text-lg text-gray-400 leading-8 max-w-xl">
+
+        Master real-world development skills with live mentorship,
+        practical projects, and AI-powered learning experiences
+        designed for future developers.
+
+      </p>
+
+      {/* Buttons */}
+      <div className="mt-10 flex flex-col sm:flex-row gap-5">
+
+        <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition duration-300 font-semibold shadow-2xl">
+
+          Start Learning
+
+        </button>
+
+        <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition">
+
+          Explore Courses
+
+        </button>
+
       </div>
 
-      <div className="hover:text-white transition">
-        🚀 100+ Projects
+      {/* Stats */}
+      <div className="mt-14 flex flex-wrap gap-10">
+
+        <div>
+          <h3 className="text-3xl font-bold">10K+</h3>
+          <p className="text-gray-400 mt-1">Students</p>
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold">120+</h3>
+          <p className="text-gray-400 mt-1">Projects</p>
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold">4.9★</h3>
+          <p className="text-gray-400 mt-1">Ratings</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE IMAGE */}
+    <div className="relative flex justify-center">
+
+      {/* Glow */}
+      <div className="absolute w-[350px] h-[350px] bg-gradient-to-r from-cyan-500 to-purple-500 blur-[100px] opacity-30 rounded-full animate-pulse"></div>
+
+      {/* Glass Card */}
+      <div className="relative bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[40px] p-5 shadow-2xl">
+
+<img
+  src="/hero.jpg"
+  alt="Hero"
+  className="w-[500px] hover:scale-105 transition duration-500"
+/>
+
+        {/* Floating Card 1 */}
+        <div className="absolute -top-5 -left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-5 py-3 rounded-2xl shadow-xl">
+
+          🚀 Live Projects
+
+        </div>
+
+        {/* Floating Card 2 */}
+        <div className="absolute bottom-5 -right-5 bg-white/10 backdrop-blur-xl border border-white/10 px-5 py-3 rounded-2xl shadow-xl">
+
+          ⚡ AI Powered
+
+        </div>
+
       </div>
 
     </div>
