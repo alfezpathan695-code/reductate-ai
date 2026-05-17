@@ -154,49 +154,84 @@ import { useState } from "react";
 </section>
 
       
-  {/* About Section */}
+{/* About Section */}
 
 <section
   id="about"
-  className="py-24 bg-white"
+  className="py-28 bg-gradient-to-b from-white to-gray-100"
 >
 
-  <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
+  <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-14 items-center">
 
+    {/* Left Side */}
     <div>
 
-      <h2 className="text-5xl font-bold">
+      <h2 className="text-5xl font-extrabold leading-tight text-gray-900">
         About Us
       </h2>
 
-      <p className="mt-8 text-gray-600 text-lg leading-8">
+      <p className="mt-6 text-gray-600 text-lg leading-8">
 
-        Reductate.ai helps students master modern technologies
-        through mentorship, live classes, real-world projects,
-        and career-focused learning.
+        We are on a mission to transform the way students learn technology.
+        Instead of just theory, we focus on <span className="font-semibold text-gray-900">real-world skills</span>,
+        hands-on projects, and industry-driven learning that prepares you for the future.
 
       </p>
 
-      <button className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition">
-        Learn More
+      <p className="mt-4 text-gray-600 text-lg leading-8">
+
+        With expert mentorship, live interactive classes, and project-based training,
+        we help you become confident, job-ready, and future-focused.
+
+      </p>
+
+      <button className="mt-8 bg-blue-600 text-white px-7 py-3 rounded-2xl hover:bg-blue-700 transition shadow-lg">
+        Explore Programs
       </button>
 
     </div>
 
-    <div className="bg-gray-100 p-10 rounded-3xl shadow-xl">
+    {/* Right Side */}
+    <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
 
-      <h3 className="text-3xl font-bold">
+      <h3 className="text-3xl font-bold text-gray-900">
         Why Choose Us?
       </h3>
 
-      <ul className="mt-6 space-y-4 text-gray-700 text-lg">
+      <p className="mt-3 text-gray-500">
+        Everything you need to grow your tech career in one place.
+      </p>
 
-        <li>✅ Industry Expert Mentors</li>
-        <li>✅ Practical Project Based Learning</li>
-        <li>✅ Career Guidance & Support</li>
-        <li>✅ Certification Programs</li>
+      <ul className="mt-8 space-y-5 text-gray-700 text-lg">
+
+        <li className="flex items-center gap-3">
+          <span className="text-green-500 text-xl">✔</span>
+          Industry Expert Mentors
+        </li>
+
+        <li className="flex items-center gap-3">
+          <span className="text-green-500 text-xl">✔</span>
+          Real-World Project Building
+        </li>
+
+        <li className="flex items-center gap-3">
+          <span className="text-green-500 text-xl">✔</span>
+          Career Guidance & Placement Support
+        </li>
+
+        <li className="flex items-center gap-3">
+          <span className="text-green-500 text-xl">✔</span>
+          Certification Programs
+        </li>
 
       </ul>
+
+      {/* Extra highlight box */}
+      <div className="mt-8 p-5 bg-blue-50 rounded-2xl border border-blue-100">
+        <p className="text-blue-700 font-medium">
+          🚀 Learn by building real projects — not just watching videos.
+        </p>
+      </div>
 
     </div>
 
@@ -204,7 +239,7 @@ import { useState } from "react";
 
 </section>
 
-{/* Features Section */}
+ 
 
 {/* Features Section */}
 
@@ -398,7 +433,7 @@ import { useState } from "react";
         </div>
 
         <div>
-          <h3 className="font-bold">Aman Singh</h3>
+          <h3 className="font-bold">Amaan Khan</h3>
           <p className="text-sm text-gray-300">UI/UX Student</p>
         </div>
 
