@@ -348,7 +348,7 @@ import { useState } from "react";
         <img
           src="/hero.jpg"
           alt="Hero"
-          className="w-[520px] rounded-[25px]"
+          className="w-[450px] rounded-[25px]"
         />
 
 
