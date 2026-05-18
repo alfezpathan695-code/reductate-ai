@@ -393,7 +393,7 @@ import { useState } from "react";
         {/* Image */}
 
         <img
-          src="/about.jpeg"
+          src="/About.jpeg"
           alt="About"
           className="w-[600px] rounded-lg shadow-2xl group-hover:scale-105 transition duration-500"
         />
