@@ -705,7 +705,7 @@ import { useState } from "react";
       <div className="flex items-center gap-4 mb-4">
 
        <img
-         src="/term2.WEBP"
+         src="/term2.webp"
          alt="Student"
          className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-lg"
        />
