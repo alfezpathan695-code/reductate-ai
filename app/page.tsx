@@ -303,26 +303,30 @@ import { useState } from "react";
       </div>
 
 
-      {/* Stats */}
+{/* Stats */}
 
-      <div className="mt-14 flex flex-wrap gap-10">
+<div className="mt-14 flex flex-wrap justify-center items-center gap-16 text-center">
 
-        <div className="hover:scale-110 transition duration-300">
-          <h3 className="text-3xl font-bold">20+</h3>
-          <p className="text-gray-400 mt-1">Projects</p>
-        </div>
+  <div className="hover:scale-110 transition duration-300">
+    <h3 className="text-4xl font-bold text-cyan-400">20+</h3>
+    <p className="text-gray-400 mt-2">Projects</p>
+  </div>
 
-        <div className="hover:scale-110 transition duration-300">
-          <h3 className="text-3xl font-bold">2+</h3>
-          <p className="text-gray-400 mt-1">Years Learning</p>
-        </div>
+  <div className="w-[1px] h-14 bg-white/20 hidden md:block"></div>
 
-        <div className="hover:scale-110 transition duration-300">
-          <h3 className="text-3xl font-bold">100%</h3>
-          <p className="text-gray-400 mt-1">Passion</p>
-        </div>
+  <div className="hover:scale-110 transition duration-300">
+    <h3 className="text-4xl font-bold text-purple-400">2+</h3>
+    <p className="text-gray-400 mt-2">Years Learning</p>
+  </div>
 
-      </div>
+  <div className="w-[1px] h-14 bg-white/20 hidden md:block"></div>
+
+  <div className="hover:scale-110 transition duration-300">
+    <h3 className="text-4xl font-bold text-pink-400">100%</h3>
+    <p className="text-gray-400 mt-2">Passion</p>
+  </div>
+
+</div>
 
     </div>
 
@@ -344,7 +348,7 @@ import { useState } from "react";
         <img
           src="/hero.jpg"
           alt="Hero"
-          className="w-[520px] rounded-[25px]"
+          className="w-[520px] h-[430px] rounded-[25px]"
         />
 
 
