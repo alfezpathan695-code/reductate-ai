@@ -421,11 +421,13 @@ if (loading) {
 
         <div className="relative bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[35px] p-4 shadow-2xl overflow-hidden">
 
-          <img
-            src="/hero.jpg"
-            alt="Hero"
-            className="w-[400px] md:w-[450px] h-[500px] md:h-[560px] object-cover rounded-[25px] group-hover:scale-105 transition duration-700"
-          />
+<img
+  src="/hero.jpg"
+  alt="Hero"
+  className="w-[320px] sm:w-[380px] md:w-[430px] lg:w-[460px]
+             h-auto object-cover rounded-[25px]
+             group-hover:scale-105 transition duration-700"
+/>
 
 
           {/* Floating Card */}
