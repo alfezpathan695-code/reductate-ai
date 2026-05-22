@@ -1,9 +1,69 @@
  "use client";
 
 import { useState } from "react";
+import { useEffect } from "react";
 
  export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+
+  const timer = setTimeout(() => {
+
+    setLoading(false);
+
+  }, 3000);
+
+  return () => clearTimeout(timer);
+
+}, []);
+
+if (loading) {
+
+  return (
+
+    <div className="fixed inset-0 bg-black flex items-center justify-center overflow-hidden z-[9999]">
+
+      <div className="absolute w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full animate-pulse"></div>
+
+      <div className="absolute w-[300px] h-[300px] bg-purple-500/20 blur-[120px] rounded-full animate-pulse right-10 bottom-10"></div>
+
+      <div className="relative z-10 flex flex-col items-center">
+
+        <div className="relative flex items-center justify-center">
+
+          <div className="w-40 h-40 border-[6px] border-cyan-400/20 rounded-full animate-spin"></div>
+
+          <div className="absolute w-28 h-28 border-[6px] border-purple-500/30 rounded-full animate-spin"></div>
+
+          <h1 className="absolute text-3xl md:text-4xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+
+            Reductate.ai
+
+          </h1>
+
+        </div>
+
+        <p className="mt-10 text-gray-400 text-lg tracking-[5px] animate-pulse">
+
+          LOADING EXPERIENCE...
+
+        </p>
+
+        <div className="mt-8 w-[250px] h-2 bg-white/10 rounded-full overflow-hidden">
+
+          <div className="h-full w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 animate-pulse"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  );
+
+}
   return (
     <div>
 
@@ -215,36 +275,38 @@ import { useState } from "react";
  
 {/* HERO SECTION */}
 
-<section className="relative min-h-screen bg-black text-white overflow-hidden flex items-center">
+<section className="relative min-h-screen bg-[#030712] overflow-hidden text-white flex items-center">
 
-  {/* Background Glow */}
+  {/* Background */}
 
-  <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-cyan-500/20 blur-[120px] rounded-full animate-pulse"></div>
+  <div className="absolute inset-0">
 
-  <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-500/20 blur-[120px] rounded-full animate-pulse"></div>
+    <div className="absolute top-[-120px] left-[-120px] w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full animate-pulse"></div>
 
+    <div className="absolute bottom-[-120px] right-[-120px] w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full animate-pulse"></div>
 
-  {/* Grid Overlay */}
+    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:45px_45px]"></div>
 
-  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+  </div>
+
 
 
   {/* Main Container */}
 
-  <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-14 items-center">
 
 
-    {/* LEFT CONTENT */}
+    {/* LEFT SIDE */}
 
     <div>
 
       {/* Badge */}
 
-      <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8 animate-pulse">
+      <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 backdrop-blur-2xl mb-6 shadow-lg animate-pulse">
 
-        <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
+        <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
 
-        <span className="text-sm text-gray-300">
+        <span className="text-xs tracking-[3px] text-cyan-300 uppercase">
           Full Stack Developer
         </span>
 
@@ -253,85 +315,94 @@ import { useState } from "react";
 
       {/* Heading */}
 
-      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1]">
 
-        Hi, I'm{" "}
+        Crafting
 
-        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse">
 
-          Alfej Pathan
+          Future Ready
 
         </span>
 
-        <br />
-
-        Building Modern
-        <br />
-
-        Web Experiences 🚀
+        Digital Products 🚀
 
       </h1>
 
 
       {/* Description */}
 
-      <p className="mt-8 text-lg text-gray-400 leading-8 max-w-xl">
+      <p className="mt-6 text-base md:text-lg text-gray-400 leading-8 max-w-xl">
 
-        Passionate frontend developer creating modern,
-        responsive and user-friendly web applications
-        using React.js, Next.js and Tailwind CSS.
+        Hi, I'm <span className="text-white font-semibold">Alfej Pathan</span> —
+        a passionate frontend developer building modern,
+        interactive and visually stunning websites using
+        React.js, Next.js and Tailwind CSS.
 
       </p>
 
 
       {/* Buttons */}
 
-      <div className="mt-10 flex flex-wrap gap-5">
+      <div className="mt-8 flex flex-wrap gap-4">
 
-        <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-110 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300 font-semibold">
+        <button className="px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold hover:scale-105 transition duration-300 shadow-[0_0_30px_rgba(34,211,238,0.4)]">
 
-          View Projects
+          Explore Projects
 
         </button>
 
-        <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:scale-105 transition duration-300">
+        <button className="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:scale-105 transition duration-300">
 
-          Contact Me
+          Hire Me
 
         </button>
 
       </div>
 
 
-{/* Stats */}
+      {/* Stats */}
 
-<div className="mt-14 flex flex-wrap justify-center items-center gap-16 text-center">
+      <div className="mt-10 flex flex-wrap items-center gap-10">
 
-  <div className="hover:scale-110 transition duration-300">
-    <h3 className="text-4xl font-bold text-cyan-400">20+</h3>
-    <p className="text-gray-400 mt-2">Projects</p>
-  </div>
+        <div className="group">
+          <h2 className="text-4xl font-black text-cyan-400 group-hover:scale-110 transition duration-300">
+            20+
+          </h2>
+          <p className="mt-1 text-gray-400 text-sm">
+            Projects
+          </p>
+        </div>
 
-  <div className="w-[1px] h-14 bg-white/20 hidden md:block"></div>
+        <div className="w-[1px] h-10 bg-white/10 hidden md:block"></div>
 
-  <div className="hover:scale-110 transition duration-300">
-    <h3 className="text-4xl font-bold text-purple-400">2+</h3>
-    <p className="text-gray-400 mt-2">Years Learning</p>
-  </div>
+        <div className="group">
+          <h2 className="text-4xl font-black text-purple-400 group-hover:scale-110 transition duration-300">
+            2+
+          </h2>
+          <p className="mt-1 text-gray-400 text-sm">
+            Years Learning
+          </p>
+        </div>
 
-  <div className="w-[1px] h-14 bg-white/20 hidden md:block"></div>
+        <div className="w-[1px] h-10 bg-white/10 hidden md:block"></div>
 
-  <div className="hover:scale-110 transition duration-300">
-    <h3 className="text-4xl font-bold text-pink-400">100%</h3>
-    <p className="text-gray-400 mt-2">Passion</p>
-  </div>
+        <div className="group">
+          <h2 className="text-4xl font-black text-pink-400 group-hover:scale-110 transition duration-300">
+            100%
+          </h2>
+          <p className="mt-1 text-gray-400 text-sm">
+            Passion
+          </p>
+        </div>
 
-</div>
+      </div>
 
     </div>
 
 
-    {/* RIGHT SIDE IMAGE */}
+
+    {/* RIGHT SIDE */}
 
     <div className="relative flex justify-center">
 
@@ -341,31 +412,42 @@ import { useState } from "react";
       <div className="absolute w-[350px] h-[350px] bg-gradient-to-r from-cyan-500 to-purple-500 blur-[100px] opacity-30 rounded-full animate-pulse"></div>
 
 
-      {/* Glass Card */}
+      {/* Card */}
 
-      <div className="relative bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[40px] p-5 shadow-2xl hover:scale-105 transition duration-500">
+      <div className="relative group">
 
-        <img
-          src="/hero.jpg"
-          alt="Hero"
-          className="w-[450px] rounded-[25px]"
-        />
+        <div className="absolute -inset-[2px] rounded-[35px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 blur-sm opacity-70 group-hover:rotate-180 transition duration-700"></div>
 
 
-        {/* Floating Card 1 */}
+        <div className="relative bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[35px] p-4 shadow-2xl overflow-hidden">
 
-        <div className="absolute -top-5 -left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-5 py-3 rounded-2xl shadow-xl animate-bounce">
+          <img
+            src="/hero.jpg"
+            alt="Hero"
+            className="w-[400px] md:w-[450px] h-[500px] md:h-[560px] object-cover rounded-[25px] group-hover:scale-105 transition duration-700"
+          />
 
-          🚀 Live Projects
 
-        </div>
+          {/* Floating Card */}
+
+          <div className="absolute top-5 -left-6 bg-black/40 border border-cyan-400/20 backdrop-blur-2xl px-4 py-3 rounded-2xl shadow-2xl animate-bounce">
+
+            <p className="text-cyan-300 text-sm font-semibold">
+              🚀 20+ Projects
+            </p>
+
+          </div>
 
 
-        {/* Floating Card 2 */}
+          {/* Floating Card */}
 
-        <div className="absolute bottom-5 -right-5 bg-white/10 backdrop-blur-xl border border-white/10 px-5 py-3 rounded-2xl shadow-xl animate-pulse">
+          <div className="absolute bottom-5 -right-6 bg-black/40 border border-purple-400/20 backdrop-blur-2xl px-4 py-3 rounded-2xl shadow-2xl animate-pulse">
 
-          ⚡ Modern UI
+            <p className="text-purple-300 text-sm font-semibold">
+              ⚡ Modern UI
+            </p>
+
+          </div>
 
         </div>
 
@@ -375,7 +457,7 @@ import { useState } from "react";
 
   </div>
 
-</section>   
+</section> 
 
 
 {/* ABOUT SECTION */}
@@ -762,6 +844,10 @@ import { useState } from "react";
   </div>
 </section>
 
+
+
+
+ 
  
 
 {/* Contact Section */}
